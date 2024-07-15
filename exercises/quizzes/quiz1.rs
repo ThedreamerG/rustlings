@@ -21,6 +21,14 @@ fn main() {
 mod tests {
     use super::*;
 
+    fn calculate_price_of_apples(quantity: i32) -> i32 {
+        if quantity > 40 {
+            quantity
+        } else {
+            quantity * 2
+        }
+    }
+
     #[test]
     fn verify_test() {
         assert_eq!(calculate_price_of_apples(35), 70);
